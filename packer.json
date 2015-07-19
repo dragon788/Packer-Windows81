@@ -1,0 +1,47 @@
+{
+  "builders": [{    
+    "type": "vmware-iso",
+    "boot_wait": "5m",
+    "communicator": "winrm",
+    "disk_size": 61440,
+    "floppy_files": [
+      "autounattend.xml"
+    ],
+    "guest_os_type": "windows8-64",
+    "headless": true,
+    "iso_url": "/Users/Lucius/ISOs/OSes/Windows81ENT/9600.17050.WINBLUE_REFRESH.140317-1640_X64FRE_ENTERPRISE_EVAL_EN-US-IR3_CENA_X64FREE_EN-US_DV9.ISO",
+    "iso_checksum_type": "md5",
+    "iso_checksum": "ee63618e3be220d86b993c1abbcf32eb",
+    "winrm_username": "vagrant",
+    "winrm_password": "vagrant",
+    "winrm_timeout": "4h",
+    "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
+    "skip_compaction": false,
+    "tools_upload_flavor": "windows",
+    "tools_upload_path": "c:/Windows/Temp/windows.iso",
+    "vmx_data": {
+      "gui.fitguestusingnativedisplayresolution": "FALSE",
+      "memsize": "2048",
+      "numvcpus": "1",
+      "virtualHW.version": "10",
+      "scsi0.virtualDev": "lsisas1068"
+    }
+  }],
+  "provisioners": [
+  {
+    "type": "powershell",
+    "scripts": [
+      "configure-private-network.ps1",
+      "enable-rdp.ps1",
+      "install-7zip.ps1",
+      "install-vmware-tools.ps1"
+]
+  }],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "keep_input_artifact": false,
+      "output": "{{.Provider}}_windows-8.1.box"
+    }
+  ]
+}
