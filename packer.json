@@ -5,7 +5,8 @@
     "communicator": "winrm",
     "disk_size": 61440,
     "floppy_files": [
-      "autounattend.xml"
+      "autounattend.xml",
+      "update-windows.ps1"
     ],
     "guest_os_type": "windows8-64",
     "headless": true,
