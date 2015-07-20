@@ -18,4 +18,4 @@ It does a couple of little extra things I may turn off, like making the vagrant 
 
 This thing takes a REALLY LONG TIME TO BUILD because of all the updates. As of today (7/19/2015) there's something like 123 updates for it to go out and grab. The update grabbing script is a bit of a grey-box, as I basically just hijacked it (as well as lots of other code) from [this awesome project](https://github.com/joefitzgerald/packer-windows) - which I think is the defacto standard for Windows / Packer relations - but I wanted a leaner build. I will review the code in the Windows Update script as time goes on, as well as clean up a lot of odds and ends (such as the fact that the Windows ISO stays mounted in the VM after it is built!). 
 
-This is currently useable, but will one day be even leaner and meaner. 
+This is currently useable but there are some minor issues. You can track my action-item list by checking out [the open issues](https://github.com/luciusbono/Packer-Windows81/issues). 
