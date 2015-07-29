@@ -1,12 +1,11 @@
 {
   "builders": [{    
     "type": "vmware-iso",
-    "boot_wait": "5m",
     "communicator": "winrm",
     "disk_size": 61440,
     "floppy_files": [
-      "autounattend.xml",
-      "update-windows.ps1"
+      "Autounattend.xml",
+      "configure-winrm.ps1"
     ],
     "guest_os_type": "windows8-64",
     "headless": true,
@@ -15,7 +14,7 @@
     "iso_checksum": "ee63618e3be220d86b993c1abbcf32eb",
     "winrm_username": "vagrant",
     "winrm_password": "vagrant",
-    "winrm_timeout": "4h",
+    "winrm_timeout": "6h",
     "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
     "skip_compaction": false,
     "tools_upload_flavor": "windows",
@@ -23,7 +22,7 @@
     "vmx_data": {
       "gui.fitguestusingnativedisplayresolution": "FALSE",
       "memsize": "2048",
-      "numvcpus": "1",
+      "numvcpus": "2",
       "virtualHW.version": "10",
       "scsi0.virtualDev": "lsisas1068"
     }
