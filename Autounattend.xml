@@ -120,14 +120,8 @@
             <FirstLogonCommands>
                 <SynchronousCommand wcm:action="add">
                     <CommandLine>cmd.exe /c powershell -Command "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force"</CommandLine>
-                    <Description>Set Execution Policy 64 Bit</Description>
+                    <Description>Set Execution Policy</Description>
                     <Order>1</Order>
-                    <RequiresUserInput>true</RequiresUserInput>
-                </SynchronousCommand>
-                <SynchronousCommand wcm:action="add">
-                    <CommandLine>C:\Windows\SysWOW64\cmd.exe /c powershell -Command "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force"</CommandLine>
-                    <Description>Set Execution Policy 32 Bit</Description>
-                    <Order>2</Order>
                     <RequiresUserInput>true</RequiresUserInput>
                 </SynchronousCommand>
                 <SynchronousCommand wcm:action="add">
@@ -146,7 +140,7 @@
                     <Description>Disable password expiration for vagrant user</Description>
                 </SynchronousCommand>
                  <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\configure-winrm.ps1</CommandLine>
+                    <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\update-windows.ps1</CommandLine>
                     <Description>Install Windows Updates</Description>
                     <Order>6</Order>
                     <RequiresUserInput>true</RequiresUserInput>
