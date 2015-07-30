@@ -5,6 +5,7 @@
     "disk_size": 61440,
     "floppy_files": [
       "Autounattend.xml",
+      "update-windows.ps1",
       "configure-winrm.ps1"
     ],
     "guest_os_type": "windows8-64",
