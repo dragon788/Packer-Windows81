@@ -1,5 +1,5 @@
 # Packer-Windows81
-A Packer build to make a pretty vanilla Windows 8.1 box for use with Vagrant.
+A Packer build to make a pretty vanilla Windows 8.1 box for use with VMWare Desktop.
 
 There are a lot of really excellent projects out there to achieve something similar, but I found that most of them relied on SSH, which means they relied on installing SSH in Windows. Since Packer started supporting WinRM, I wanted to make a 'cleaner' Windows build for testing purposes. I like to start with things as vanilla as possible and go nuts from there. 
 
