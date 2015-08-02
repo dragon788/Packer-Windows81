@@ -10,9 +10,9 @@
     ],
     "guest_os_type": "windows8-64",
     "headless": true,
-    "iso_url": "/Users/Lucius/ISOs/OSes/Windows81ENT/9600.17050.WINBLUE_REFRESH.140317-1640_X64FRE_ENTERPRISE_EVAL_EN-US-IR3_CENA_X64FREE_EN-US_DV9.ISO",
+    "iso_url": "/Users/Lucius/ISOs/OSes/Windows81ENT/Win81_ENT-Patched-8-1-2015.iso",
     "iso_checksum_type": "md5",
-    "iso_checksum": "ee63618e3be220d86b993c1abbcf32eb",
+    "iso_checksum": "12ac5c1c45d2ede64b380265c2cb070a",
     "winrm_username": "vagrant",
     "winrm_password": "vagrant",
     "winrm_timeout": "6h",
@@ -34,8 +34,9 @@
     "scripts": [
       "configure-private-network.ps1",
       "enable-rdp.ps1",
-      "install-7zip.ps1",
-      "install-vmware-tools.ps1"
+      "install-vmware-tools.ps1",
+      "enable-uac.ps1",
+      "disable-hibernate.ps1"
 ]
   }],
   "post-processors": [
