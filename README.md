@@ -21,11 +21,10 @@ This build is very basic. It is intended to:
 * **VMWare Workstation or Fusion** - warning: I have only tested this build on Fusion 7.1.2
 * **The [Vagrant VMWare Provider](http://www.vagrantup.com/vmware)**
 
+The build will eventually support Virtualbox, but for now it doesn't. 
+
 ## Other things to note
 
 You will, of course, have to change the `iso_url` and `iso_checksum` values in the `packer.json` file to pertain to your own personal Windows ISO. The MD5 that is in this repo is not likely to be a stock ISO MD5, as I've slip-streamed updates into my own ISO. 
 
 This thing takes a REALLY LONG TIME TO BUILD because of all the updates. As of today (7/19/2015) there's something like 123 updates for it to go out and grab. The update grabbing script is a bit of a grey-box, as I basically just hijacked it (as well as lots of other code) from [this awesome project](https://github.com/joefitzgerald/packer-windows) - which I think is the defacto standard for Windows / Packer relations - but I wanted a leaner build. This project started as a frankenstein build, but is turning more into a ground-up rewrite of a lot of other projects' scripts and code. With the exception of the `update-windows.ps1` script, which I only modified very slightly, I will slowly go through all the code in this project and make sure I kill all the cruft. 
-
-
-
