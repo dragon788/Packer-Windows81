@@ -14,3 +14,5 @@ cmd.exe /c netsh firewall add portopening TCP 5985 "Port 5985"
 cmd.exe /c net stop winrm
 cmd.exe /c sc config winrm start= auto
 cmd.exe /c net start winrm
+
+exit 0
